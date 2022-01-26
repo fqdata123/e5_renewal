@@ -34,6 +34,7 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
       run: |
         java -jar ./e5_renewal.jar "$CLIENT_ID" "$USERNAME" "$PASSWORD" "$TENANT_GUID" "$CLIENT_SECRET"  > ./run.log
+        java -jar ./e5_renewal.jar "$CLIENT_ID2" "$USERNAME2" "$PASSWORD2" "$TENANT_GUID2" "$CLIENT_SECRET2"  >> ./run.log
         tail run.log
 
     - name: Telegram notice
