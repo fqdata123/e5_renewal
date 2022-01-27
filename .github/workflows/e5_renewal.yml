@@ -32,6 +32,11 @@ jobs:
         TENANT_GUID: ${{ secrets.TENANT_GUID }}
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
+        CLIENT_ID2: ${{ secrets.CLIENT_ID2 }}
+        CLIENT_SECRET2: ${{ secrets.CLIENT_SECRET2 }}
+        TENANT_GUID2: ${{ secrets.TENANT_GUID2 }}
+        USERNAME2: ${{ secrets.USERNAME2 }}
+        PASSWORD2: ${{ secrets.PASSWORD2 }}
       run: |
         java -jar ./e5_renewal.jar "$CLIENT_ID" "$USERNAME" "$PASSWORD" "$TENANT_GUID" "$CLIENT_SECRET"  > ./run.log
         java -jar ./e5_renewal.jar "$CLIENT_ID2" "$USERNAME2" "$PASSWORD2" "$TENANT_GUID2" "$CLIENT_SECRET2"  >> ./run.log
